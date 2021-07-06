@@ -76,9 +76,19 @@ class postController extends Controller
      */
     public function show(Post $post)
     {
+        $socialShare = \Share::page(
+        $post->url,
+        $post->title,
+    )
+        ->facebook()
+        ->twitter()
+        ->reddit()
+        ->linkedin()
+        ->whatsapp()
+        ->telegram();
         $user = $post->user;
         $profile = $post->user->profile;
-        return view('posts.show')->with('post', $post)->with('categories', Category::all())->with('profile', $profile)->with('user', $user)->with('tags', Tag::all());
+        return view('posts.show',compact('socialShare'))->with('post', $post)->with('categories', Category::all())->with('profile', $profile)->with('user', $user)->with('tags', Tag::all());
     }
 
     /**

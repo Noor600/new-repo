@@ -25,12 +25,12 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '22da525ea1960d2a69c52f2105aaa47cacdd1e3b',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -446,6 +446,15 @@ private static $installed = array (
         0 => 'v8.20.1',
       ),
     ),
+    'jorenvanhocht/laravel-share' => 
+    array (
+      'pretty_version' => '4.0.0',
+      'version' => '4.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'a8f4bd843f2dba8d6c968edb3dadc8f27de09303',
+    ),
     'kodova/hamcrest-php' => 
     array (
       'replaced' => 
@@ -464,12 +473,12 @@ private static $installed = array (
     ),
     'laravel/laravel' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '22da525ea1960d2a69c52f2105aaa47cacdd1e3b',
     ),
     'laravel/sail' => 
     array (

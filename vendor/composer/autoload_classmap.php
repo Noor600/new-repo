@@ -8,6 +8,8 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Http\\Controllers\\APILoginController' => $baseDir . '/app/Http/Controllers/APILoginController.php',
+    'App\\Http\\Controllers\\APIRegisterController' => $baseDir . '/app/Http/Controllers/APIRegisterController.php',
     'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',
@@ -2030,6 +2032,9 @@ return array(
     'Illuminate\\View\\ViewFinderInterface' => $vendorDir . '/laravel/framework/src/Illuminate/View/ViewFinderInterface.php',
     'Illuminate\\View\\ViewName' => $vendorDir . '/laravel/framework/src/Illuminate/View/ViewName.php',
     'Illuminate\\View\\ViewServiceProvider' => $vendorDir . '/laravel/framework/src/Illuminate/View/ViewServiceProvider.php',
+    'Jorenvh\\Share\\Providers\\ShareServiceProvider' => $vendorDir . '/jorenvanhocht/laravel-share/src/Providers/ShareServiceProvider.php',
+    'Jorenvh\\Share\\Share' => $vendorDir . '/jorenvanhocht/laravel-share/src/Share.php',
+    'Jorenvh\\Share\\ShareFacade' => $vendorDir . '/jorenvanhocht/laravel-share/src/ShareFacade.php',
     'JsonException' => $vendorDir . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
     'Laravel\\Sail\\SailServiceProvider' => $vendorDir . '/laravel/sail/src/SailServiceProvider.php',
     'Laravel\\Tinker\\ClassAliasAutoloader' => $vendorDir . '/laravel/tinker/src/ClassAliasAutoloader.php',
