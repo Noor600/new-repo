@@ -91,6 +91,7 @@
             </div>
             <div class="card-body">
               <strong class="float-left pt-2">Social Media : </strong>
+              
               {!! $socialShare !!}
           </div>
             
