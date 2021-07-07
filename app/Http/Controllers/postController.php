@@ -99,7 +99,9 @@ class postController extends Controller
         // Return total views count that have been made between 2020 and 2022
         // Return total views count
         
-        $totalViews = views($post)->count();
+        $totalViews = views($post)
+        ->period(Period::create('2020', '2021'))
+        ->count();
         $user = $post->user;
         $profile = $post->user->profile;
         return view('posts.show',compact('socialShare'),compact('totalViews'))->with('post', $post)->with('categories', Category::all())->with('profile', $profile)->with('user', $user)->with('tags', Tag::all());
