@@ -96,7 +96,6 @@ class postController extends Controller
         ->telegram();
 
         /* visitor counter */
-        // Return total views count that have been made between 2020 and 2022
         // Return total views count
         
         $totalViews = views($post)
