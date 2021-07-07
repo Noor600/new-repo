@@ -100,11 +100,19 @@ class postController extends Controller
         // Return total views count
         
         $totalViews = views($post)
-        ->period(Period::create('2020', '2021'))
-        ->count();
+        ->record();
+        // the latest posts
+         /* total views for the last 2 month */
+        $postSince2MonthAgo = Period::subMonths(2);
+
+         /* post since 2 months ago */
+        $featuredPosts = Post::orderByViews('desc', $postSince2MonthAgo)
+        ->take(10)
+        ->get();
+
         $user = $post->user;
         $profile = $post->user->profile;
-        return view('posts.show',compact('socialShare'),compact('totalViews'))->with('post', $post)->with('categories', Category::all())->with('profile', $profile)->with('user', $user)->with('tags', Tag::all());
+        return view('posts.show',compact('socialShare'),compact('totalViews'),compact('featuredPosts'))->with('post', $post)->with('categories', Category::all())->with('profile', $profile)->with('user', $user)->with('tags', Tag::all());
     }
 
     /**
