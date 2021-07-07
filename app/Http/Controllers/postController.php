@@ -112,7 +112,7 @@ class postController extends Controller
 
         $user = $post->user;
         $profile = $post->user->profile;
-        return view('posts.show',compact('socialShare'),compact('totalViews'),compact('featuredPosts'))->with('post', $post)->with('categories', Category::all())->with('profile', $profile)->with('user', $user)->with('tags', Tag::all());
+        return view('posts.show',compact(['socialShare', 'totalViews', 'featuredPosts']))->with('post', $post)->with('categories', Category::all())->with('profile', $profile)->with('user', $user)->with('tags', Tag::all());
     }
 
     /**

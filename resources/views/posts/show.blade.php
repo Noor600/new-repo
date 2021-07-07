@@ -94,7 +94,9 @@
 
               {!! $socialShare !!}
           </div>
-          <h1>{!! $featuredPosts !!}</h1>
+          @foreach ($featuredPosts as $featuredPost)
+          <p>This is post {{ $featuredPost->title }}</p>
+          @endforeach
             <div class="about-author d-flex p-4 bg-light">
               <div class="bio mr-5">
                 <img src="{{ $user->hasPicture() ? asset('storage/'.$user->getPicture()) : $user->getGravatar() }}" alt="Image placeholder" style="border-radius: 50%" class="img-fluid mb-4">
