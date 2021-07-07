@@ -100,7 +100,7 @@ class postController extends Controller
         // Return total views count
         
         $totalViews = views($post)
-        ->record();
+        ->count();
         // the latest posts
          /* total views for the last 2 month */
         $postSince2MonthAgo = Period::subMonths(2);
