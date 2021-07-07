@@ -90,10 +90,12 @@
               </div>
             </div>
             <div class="card-body">
+              {{-- task 1 --}}
               <strong class="float-left pt-2">Social Media : </strong>
 
               {!! $socialShare !!}
           </div>
+          {{-- task 3 --}}
           @foreach ($featuredPosts as $featuredPost)
           <p>This is post {{ $featuredPost->title }}</p>
           @endforeach
@@ -104,6 +106,7 @@
               <div class="desc">
               <h3>{{ $user->name }}</h3>
               <p>{{ $profile->about }}</p>
+              {{-- task 2 --}}
               <p><i class="fa fa-eye"></i> {{ $totalViews }} عدد المشاهدات</p>
               </div>
             </div>
