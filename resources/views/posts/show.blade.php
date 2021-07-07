@@ -91,10 +91,10 @@
             </div>
             <div class="card-body">
               <strong class="float-left pt-2">Social Media : </strong>
-              
+
               {!! $socialShare !!}
           </div>
-            
+
             <div class="about-author d-flex p-4 bg-light">
               <div class="bio mr-5">
                 <img src="{{ $user->hasPicture() ? asset('storage/'.$user->getPicture()) : $user->getGravatar() }}" alt="Image placeholder" style="border-radius: 50%" class="img-fluid mb-4">
@@ -102,6 +102,7 @@
               <div class="desc">
               <h3>{{ $user->name }}</h3>
               <p>{{ $profile->about }}</p>
+              <p><i class="fa fa-eye"></i> {{ $totalViews }} عدد المشاهدات</p>
               </div>
             </div>
 

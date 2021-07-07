@@ -7,12 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\Category;
 use App\Models\User;
+use CyrildeWit\EloquentViewable\InteractsWithViews;
+use CyrildeWit\EloquentViewable\Contracts\Viewable;
 
 
-class Post extends Model
+
+class Post extends Model implements Viewable
 {
+    use InteractsWithViews;
     use HasFactory;
     use SoftDeletes;
+
+
     protected $fillable = ['title', 'description', 'content', 
     'image', 'category_id', 'user_id'];
     public function cateogry() {

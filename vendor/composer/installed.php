@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '22da525ea1960d2a69c52f2105aaa47cacdd1e3b',
+    'reference' => '968d5ca7161c387117f88e996adc52a5bb8dfa6e',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -35,6 +35,15 @@
       array (
         0 => '*',
       ),
+    ),
+    'cyrildewit/eloquent-viewable' => 
+    array (
+      'pretty_version' => 'v6.0.2',
+      'version' => '6.0.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '699294489e397c18a59ff9fafadde8154be85c02',
     ),
     'davedevelopment/hamcrest-php' => 
     array (
@@ -422,6 +431,15 @@
         0 => 'v8.20.1',
       ),
     ),
+    'jaybizzle/crawler-detect' => 
+    array (
+      'pretty_version' => 'v1.2.106',
+      'version' => '1.2.106.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '78bf6792cbf9c569dc0bf2465481978fd2ed0de9',
+    ),
     'jorenvanhocht/laravel-share' => 
     array (
       'pretty_version' => '4.0.0',
@@ -454,7 +472,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '22da525ea1960d2a69c52f2105aaa47cacdd1e3b',
+      'reference' => '968d5ca7161c387117f88e996adc52a5bb8dfa6e',
     ),
     'laravel/sail' => 
     array (
