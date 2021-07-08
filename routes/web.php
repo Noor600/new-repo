@@ -35,3 +35,6 @@ Route::middleware(['auth'])->group(function() {
     Route::get('/users/{user}/profile', 'App\Http\Controllers\userController@edit')->name('users.edit');
     Route::post('/users/{user}/profile', 'App\Http\Controllers\userController@update')->name('users.update');
 });
+
+Route::post('/comment/store', 'App\Http\Controllers\CommentController@store')->name('comment.add');
+Route::post('/reply/store', 'App\Http\Controllers\CommentController@replyStore')->name('reply.add');

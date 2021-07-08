@@ -35,4 +35,8 @@ class Post extends Model implements Viewable
     public function user() {
         return $this->belongsTo('App\Models\User');
     }
+    public function comments()
+    {
+        return $this->morphMany(Comment::class, 'commentable')->whereNull('parent_id');
+    }
 }

@@ -42,6 +42,9 @@
         #social-links{
             float: left;
         }
+        .display-comment .display-comment {
+        margin-left: 40px
+    }
     </style>
   </head>
   <body>
@@ -87,6 +90,8 @@
                 @foreach ($post->tags as $tag)
                 <a href="#" class="tag-cloud-link">{{ $tag->name }}</a>
                 @endforeach
+                {{-- task 2 --}}
+              <p><i class="fa fa-eye"></i> {{ $totalViews }} عدد المشاهدات</p>
               </div>
             </div>
             <div class="card-body">
@@ -95,10 +100,42 @@
 
               {!! $socialShare !!}
           </div>
-          {{-- task 3 --}}
-          @foreach ($featuredPosts as $featuredPost)
-          <p>This is post {{ $featuredPost->title }}</p>
-          @endforeach
+          <br>
+          <div class="card-body">
+            
+            {{-- task 3 --}}
+            <h3>the most popular post</h3>
+            @foreach ($featuredPosts as $featuredPost)
+                  <p>This is post {{ $featuredPost->title }}</p>
+            @endforeach
+        
+        </div>
+         
+
+        <div class="card-body">
+          <h5>Display Comments</h5>
+      
+          @include('posts\partials\replys', ['comments' => $post->comments, 'post_id' => $post->id])
+
+          <hr />
+         </div>
+
+         <div class="card-body">
+          <h5>Leave a comment</h5>
+          <form method="post" action="{{ route('comment.add') }}">
+              @csrf
+              <div class="form-group">
+                  <input type="text" name="comment" class="form-control" />
+                  <input type="hidden" name="post_id" value="{{ $post->id }}" />
+              </div>
+              <div class="form-group">
+                  <input type="submit" class="btn btn-sm btn-outline-danger py-0" style="font-size: 0.8em;" value="Add Comment" />
+              </div>
+          </form>
+         </div>
+
+
+
             <div class="about-author d-flex p-4 bg-light">
               <div class="bio mr-5">
                 <img src="{{ $user->hasPicture() ? asset('storage/'.$user->getPicture()) : $user->getGravatar() }}" alt="Image placeholder" style="border-radius: 50%" class="img-fluid mb-4">
@@ -106,8 +143,6 @@
               <div class="desc">
               <h3>{{ $user->name }}</h3>
               <p>{{ $profile->about }}</p>
-              {{-- task 2 --}}
-              <p><i class="fa fa-eye"></i> {{ $totalViews }} عدد المشاهدات</p>
               </div>
             </div>
 

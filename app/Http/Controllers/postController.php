@@ -96,6 +96,7 @@ class postController extends Controller
         ->telegram();
 
         /* visitor counter */
+        // Return total views count that have been made between 2020 and 2022
         // Return total views count
         
         $totalViews = views($post)
@@ -111,7 +112,7 @@ class postController extends Controller
 
         $user = $post->user;
         $profile = $post->user->profile;
-        return view('posts.show',compact(['socialShare', 'totalViews', 'featuredPosts']))->with('post', $post)->with('categories', Category::all())->with('profile', $profile)->with('user', $user)->with('tags', Tag::all());
+        return view('posts.single',compact(['socialShare', 'totalViews', 'featuredPosts']))->with('post', $post)->with('categories', Category::all())->with('profile', $profile)->with('user', $user)->with('tags', Tag::all());
     }
 
     /**
